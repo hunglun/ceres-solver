@@ -33,15 +33,15 @@
 # example serves to make it easy to do so.
 
 # This should point to place where you unpacked or cloned Ceres.
-CERES_SRC_DIR := /home/keir/wrk/ceres-extra
+CERES_SRC_DIR := /Usr/local
 
 # This should point to the place where you built Ceres. If you got Ceres by
 # installing it, then this will likely be /usr/local/lib.
-CERES_BIN_DIR := /home/keir/wrk/ceres-extra-bin
+CERES_BIN_DIR := /Usr/local
 
 # The place you unpacked or cloned Eigen. If Eigen was installed from packages,
-# this will likely be /usr/local/include.
-EIGEN_SRC_DIR := /home/keir/src/eigen-3.0.5
+# this will likely be /usr/local/include. 
+EIGEN_SRC_DIR := /usr/local/include/eigen3
 
 INCLUDES := -I$(CERES_SRC_DIR)/include \
             -I$(EIGEN_SRC_DIR)
@@ -57,7 +57,7 @@ CERES_LIBRARY_DEPENDENCIES += -llapack -lcamd -lamd -lccolamd -lcolamd -lcholmod
 CERES_LIBRARY_DEPENDENCIES += -lcxsparse
 
 # If Ceres was built with OpenMP:
-CERES_LIBRARY_DEPENDENCIES += -fopenmp -lpthread -lgomp -lm
+# CERES_LIBRARY_DEPENDENCIES += -fopenmp -lpthread -lgomp -lm
 
 # The set of object files for your application.
 APPLICATION_OBJS := simple_bundle_adjuster.o
